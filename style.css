@@ -6,11 +6,11 @@ body{
 }
 
 .container{
-    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 .header{
@@ -33,8 +33,6 @@ body{
 
 .gameBoard{
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .columns{
@@ -91,7 +89,7 @@ body{
     font-family: 'JetBrains Mono', monospace;
 }
 
-.restart, .ai{
+.start, .ai{
     margin-top: 20px;
     height: 75px;
     background-color: hsla(0, 0%, 0%, 0.781);
@@ -102,10 +100,37 @@ body{
 }
 
 .ai{
-    width: 100px;
+    min-width: 100px;
     margin-left: 40px;
 }
 
-.restart:hover, .ai:hover{
+.start:hover, .ai:hover{
     cursor: pointer;
+}
+
+@media only screen and (max-width: 629px){
+    .header{
+        width: 100%;
+        height: 100px;
+    }
+    .title{
+        font-size: 54px;
+    }
+    .players{
+        font-size: 22px;
+    }
+    .columns{
+        width: 108px;
+        height: 108px;
+        font-size: 100px;
+    }
+    .start{
+        font-size: 20px;
+        height: 60px;
+    }
+    .ai{
+        font-size: 22px;
+        min-width: 100px;
+        height: 60px;
+    }
 }
