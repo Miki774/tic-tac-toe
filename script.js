@@ -161,12 +161,22 @@ const gameController = (()=>{
                 let playAgain = document.querySelector(".start");
                 let buttons = document.querySelector('.buttons');
                 if(player1Win){
-                    text.textContent = "Congratz, " + player1.name + " has won!";
+                    if(checkAI){
+                        text.textContent = "Congratz, Player has won!";
+                    }
+                    else{
+                        text.textContent = "Congratz, " + player1.name + " has won!";
+                    }
                     playAgain.textContent = "Play Again";
                     buttons.style.display = 'block';
                 }
                 else if(player2Win){
-                    text.textContent = "Congratz, " + player2.name + " has won!";
+                    if(checkAI){
+                        text.textContent = "Player has lost";
+                    }
+                    else{
+                        text.textContent = "Congratz, " + player2.name + " has won!";
+                    }
                     playAgain.textContent = "Play Again";
                     buttons.style.display = 'block';
                 }
